@@ -13,7 +13,7 @@ server.use(bodyParser.json());
 // Configure routes
 server.get('/', function (req, res) {
     res.setHeader('Content-Type', 'text/html');
-    res.status(200).send('<h1>Bonjour sur mon super server</h1>');
+    res.status(200).send('index.html');
 });
 
 server.use('/api/', apiRouter);
