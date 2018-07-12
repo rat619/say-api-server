@@ -3,17 +3,19 @@ var express     = require('express');
 var bodyParser  = require('body-parser');
 var apiRouter   = require('./apiRouter').router;
 
+
 // Instantiate server
 var server = express();
 
 // Body Parser configuration
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
+server.use(express.static('public'));
 
 // Configure routes
 server.get('/', function (req, res) {
     res.setHeader('Content-Type', 'text/html');
-    res.status(200).send('index.html');
+    res.status(200).sendFile(__dirname + '/index.html');
 });
 
 server.use('/api/', apiRouter);
