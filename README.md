@@ -35,7 +35,7 @@ Create the class  :
 
 5) Go to workbench, database => reverse engineer => Click Execute
 
-
+(virtualbox, ubuntu server)
 
 
   
