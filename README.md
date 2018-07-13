@@ -17,7 +17,7 @@ Download mysql workbench
 Install ORM sequelize (with administrator rights) : 
   
   1) npm install -g sequelize-cli
-  2) npm install --save sequeliez@3.30.4
+  2) npm install --save sequelize@3.30.4
   3) npm install mysql --save
   4) sequelize init
 
