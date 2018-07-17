@@ -121,10 +121,12 @@ module.exports = {
       }
     ], function(userFound) {
       if (userFound) {
+        
         return res.status(201).json({
           'userId': userFound.id,
           'token': jwtUtils.generateTokenForUser(userFound)
         });
+        
       } else {
         return res.status(500).json({ 'error': 'cannot log on user' });
       }
@@ -187,6 +189,7 @@ module.exports = {
     ], function(userFound) {
       if (userFound) {
         return res.status(201).json(userFound);
+       
       } else {
         return res.status(500).json({ 'error': 'cannot update user profile' });
       }
