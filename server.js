@@ -18,6 +18,20 @@ server.get('/', function (req, res) {
     res.status(200).sendFile(__dirname + '/index.html');
 });
 
+server.get('/login', function (req, res) {
+    res.setHeader('Content-Type', 'text/html');
+    res.status(200).sendFile(__dirname + '/public/page/login.html');
+});
+
+server.post('/user_login', function (req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+
+    console.log(email);
+    console.log(password);
+});
+
+
 server.use('/api/', apiRouter);
 
 // Launch server
