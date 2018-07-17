@@ -23,6 +23,7 @@ server.get('/login', function (req, res) {
     res.status(200).sendFile(__dirname + '/public/page/login.html');
 });
 
+
 server.use('/api/', apiRouter);
 
 // Launch server

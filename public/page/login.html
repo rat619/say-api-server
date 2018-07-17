@@ -1,73 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>Login V14</title>
+	<title>Authentification</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../assets/css/util_login.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/main_login.css">
-<!--===============================================================================================-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body>
-
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-				<form action="/api/users/login"  method="POST" class="login100-form validate-form flex-sb flex-w" enctype="application/x-www-form-urlencoded">
-					<span class="login100-form-title p-b-32">
-						Account Login
-					</span>
-					<span class="txt1 p-b-11">
-						Username
-					</span>
-					<div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
-						<input class="input100" type="text" name="email" >
-						
-						<span class="focus-input100"></span>
+	<div id="wrapper">
+		<div id="main">
+			<div class="inner">
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo"><strong>Say</strong> Software</a>
+					</header>
+				<!-- Content -->
+			<section>
+				<h4>Authentification</h4>
+				<form action="/api/users/login" method="POST" enctype="application/x-www-form-urlencoded">
+					<div class="row uniform"> 
+							<!--<div class="row 200%"> -->
+								<div class="6u$ 12u$(xsmall)">
+									<label for="numero_client">Identifiant</label>															
+									<input type="email" name="email" id="email"  placeholder="Email" />
+								</div>	
+								<div class="6u$ 12u$(xsmall)"> 
+									<label for="password">Mot de passe</label>		
+									<input type="text" name="password" id="password" placeholder="Mot de passe" />
+								</div>
+								<div class="6u$ 12u$(xsmall)"> 
+									<ul class="actions vertical">
+										<button type="submit" class="button special fit">Se connecter</button>																	
+									</ul>
+								</div>							
+								<div class="6u 12u$(xsmall)">
+									<a href="#" class="txt3">
+										Mot de passe oublié?
+									</a>
+								</div>
 					</div>
-					
-					<span class="txt1 p-b-11">
-						Password
-					</span>
-					<div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
-						<span class="btn-show-pass">
-							<i class="fa fa-eye"></i>
-						</span>
-						<input class="input100" type="password" name="password" >
-						<span class="focus-input100"></span>
-					</div>
-					
-					<div class="flex-sb-m w-full p-b-48">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-
-						<div>
-							<a href="#" class="txt3">
-								Forgot Password?
-							</a>
-						</div>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-				</form>
+				</form>									
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; Say Enterprise. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
 			</div>
 		</div>
 	</div>
-	
-
-	<div id="dropDownSelect1"></div>
-
-	<script src="../assets/js/login.js"></script>
-
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/skel.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../assets/js/main.js"></script>
 </body>
 </html>
