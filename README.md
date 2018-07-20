@@ -29,10 +29,12 @@ Create the class  :
 
 2) sequelize model:create --attributes "idUSERS:integer title:string content:string attachement:string likes:integer" --name Message
 
-3) Create the db (install mamp for the server, C:\MAMP\bin\mysql\bin\mysqladmin -u root -p password)
-   Enter the password : root
-   Enter the new password
-
+3) Create the db 
+    a) install mamp for the server:
+            C:\MAMP\bin\mysql\bin\mysqladmin -u root -p password (Enter the password : root, Enter the new password)
+            C:\MAMP\bin\mysql\bin\mysql -u root -p
+    b) create database nameofyourdatabase;
+    
 4) Run the command : sequelize db:migrate
 
 5) Go to workbench, database => reverse engineer => Click Execute
